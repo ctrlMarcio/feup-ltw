@@ -1,0 +1,160 @@
+/* GENERAL by tag specificity */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 1em 4.5%;
+}
+
+aside {
+    background-color: #2A2F33;
+    padding: 1em;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* SPECIFIC by document placement */
+
+body > header {
+    background-color: #046DD5;
+    padding: 0.5% 1% 1% 1%;
+    font-size: 0.9em;
+}
+
+body > header > h1 {
+    font-size: 1.7em;
+}
+
+body > header > h2 {
+    margin-top: 0.1rem;
+    margin-bottom: 0.2rem;
+    font-size: 1em;
+}
+
+div#signup > a:nth-of-type(1) {
+    padding: 0px 10px 0px 0px;
+    border-right: 1px solid white;
+}
+
+div#signup > a:nth-of-type(2) {
+    padding: 0px 0px 0px 10px;
+}
+
+nav#menu li {
+    border-top: 5px solid;
+    padding: 1.15em;
+    text-align: center;
+}
+
+nav#menu li:nth-of-type(1) {
+    border-color: #E1493E;
+}
+
+nav#menu li:nth-of-type(2) {
+    border-color: #8ABA56;
+}
+
+nav#menu li:nth-of-type(3) {
+    border-color: #5B4282;
+}
+
+nav#menu li:nth-of-type(4) {
+    border-color: #FF8932;
+}
+
+nav#menu li:nth-of-type(5) {
+    border-color: #19B6E9;
+}
+
+nav#menu li:nth-of-type(6) {
+    border-color: #E84C8B;
+}
+
+nav#menu a {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+aside p {
+    color: white;
+}
+
+aside > article {
+    margin: 0px, 1em;
+    line-height: 1.4em;
+    font-size: 1.1em;
+}
+
+section#news article > header {
+    position: absolute;
+    top: 0px;
+    padding: 1em 1.5em;
+    width: 14%;
+    line-height: 2em;
+    text-shadow: 7px 7px 6px #000;
+}
+
+section#news > article {
+    position: relative;
+    margin: 1em 0em;
+    font-size: 1.12em;
+}
+
+section#news > article > img {
+    width: 100%;
+}
+
+section#news article > p {
+    padding: 0 1em;
+    line-height: 1.35em;
+}
+
+section#news article > p:nth-of-type(1)::first-letter {
+    font-size: 2em;
+}
+
+section#news article > footer {
+    padding: 0.8em;
+    background-color: #F4655F;
+    font-size: 0.8em;
+    color: white;
+}
+
+section#news article > footer a {
+    border-bottom: 1.1px solid white;
+}
+
+section#news article > footer > span.date {
+    margin: 0px 1em;
+}
+
+body > footer {
+    background-color: #2A2F33;
+    padding: 0.2em 1em;
+    color: white;
+}
+
+/* TEMPORARY */
+
+#hamburger, .hamburger {
+    display: none;
+}
