@@ -1,0 +1,61 @@
+@media (max-width: 60em) {
+	body {
+		display: block;
+		width: 100%;
+	}
+
+	body > aside {
+		display: none;
+	}
+
+	section#news > article {
+		margin: 0 0 1em 0;
+	}
+
+	body > footer {
+		grid-area: footer;
+		margin-right: 0em;
+	}
+}
+
+@media (max-width: 30em) {
+    body {
+        display: block;
+    }
+
+    body > header {
+        margin: 0;
+    }
+
+	body > header > h2 {
+		display: none;
+	}
+
+	div#signup {
+		position: static;
+	}
+
+	nav#menu {
+        height: 2em;
+        background-color: #2a2f33;
+    }
+    
+    nav#menu input[type='checkbox'] + label:before {
+        color: white;
+        content: "☰";
+    }
+    
+    nav#menu input[type='checkbox']:checked + label:before {
+        content: "✕";
+    }
+
+	nav#menu > ul {
+		display: none;
+    }
+    
+    nav#menu input[type='checkbox']:checked ~ ul {
+        position: static;
+        display: block;
+    }
+
+}

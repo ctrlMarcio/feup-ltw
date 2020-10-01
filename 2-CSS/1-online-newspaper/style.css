@@ -1,10 +1,13 @@
 /* GENERAL by tag specificity */
+/**
+* {
+    border: 1px solid red;
+    margin: 10px;
+}
+*/
+
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-body {
-    margin: 1em 4.5%;
 }
 
 aside {
@@ -35,8 +38,7 @@ a {
 
 body > header {
     background-color: #046DD5;
-    padding: 0.5% 1% 1% 1%;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 body > header > h1 {
@@ -44,23 +46,28 @@ body > header > h1 {
 }
 
 body > header > h2 {
-    margin-top: 0.1rem;
+    margin-top: 0;
     margin-bottom: 0.2rem;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 div#signup > a:nth-of-type(1) {
-    padding: 0px 10px 0px 0px;
+    padding: 0px 1em 0px 0px;
     border-right: 1px solid white;
 }
 
 div#signup > a:nth-of-type(2) {
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 1em;
+}
+
+#hamburger {
+    display: none;
 }
 
 nav#menu li {
     border-top: 5px solid;
     padding: 1.15em;
+    margin: 0px;
     text-align: center;
 }
 
@@ -101,14 +108,13 @@ aside p {
 aside > article {
     margin: 0px, 1em;
     line-height: 1.4em;
-    font-size: 1.1em;
 }
 
 section#news article > header {
     position: absolute;
     top: 0px;
     padding: 1em 1.5em;
-    width: 14%;
+    width: 29%;
     line-height: 2em;
     text-shadow: 7px 7px 6px #000;
 }
@@ -116,7 +122,6 @@ section#news article > header {
 section#news > article {
     position: relative;
     margin: 1em 0em;
-    font-size: 1.12em;
 }
 
 section#news > article > img {
@@ -133,7 +138,7 @@ section#news article > p:nth-of-type(1)::first-letter {
 }
 
 section#news article > footer {
-    padding: 0.8em;
+    padding: 0.9em;
     background-color: #F4655F;
     font-size: 0.8em;
     color: white;
@@ -149,12 +154,6 @@ section#news article > footer > span.date {
 
 body > footer {
     background-color: #2A2F33;
-    padding: 0.2em 1em;
+    padding: 0em 1em;
     color: white;
-}
-
-/* TEMPORARY */
-
-#hamburger, .hamburger {
-    display: none;
 }
