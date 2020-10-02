@@ -20,7 +20,8 @@
 
 @media (max-width: 30em) {
     body {
-        display: block;
+		display: block;
+		background-color: white;
     }
 
     body > header {
@@ -43,7 +44,7 @@
 		width: auto;
 		display: block;
 		padding: 1em;
-        color: white;
+		color: white;
 	}
 
     nav#menu input[type='checkbox'] + label:before {
@@ -66,8 +67,9 @@
 		background-color: #edeff0;
 		text-align: left;
 		border-width: 0px 0px 0px 5px;
-		transition: height 0.5s;
-		transition: padding 0.5s;
+		visibility: hidden;
+		opacity: 0;
+		transition: height 0.5s, padding 0.5s, visibility 0.5s, opacity 0.3s;
 	}
 
 	nav#menu > ul > li > a {
@@ -77,6 +79,8 @@
     nav#menu input[type='checkbox']:checked ~ ul > li {
 		height: 0.5em;
 		padding: 1em;
+		visibility: visible;
+		opacity: 1;
 	}
 
 	section#news {
@@ -102,5 +106,9 @@
 
 	section#news > article > p{
 		font-size: 0.8em;
+	}
+
+	body > footer {
+		padding: 0.3em 1em;
 	}
 }
