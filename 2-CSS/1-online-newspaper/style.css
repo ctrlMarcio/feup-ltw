@@ -1,10 +1,4 @@
 /* GENERAL by tag specificity */
-/**
-* {
-    border: 1px solid red;
-    margin: 10px;
-}
-*/
 
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -65,7 +59,8 @@ div#signup > a:nth-of-type(2) {
 }
 
 nav#menu li {
-    border-top: 5px solid;
+    border-width: 5px 0px 0px 0px;
+    border-style: solid;
     padding: 1.15em;
     margin: 0px;
     text-align: center;
@@ -128,12 +123,12 @@ section#news > article > img {
     width: 100%;
 }
 
-section#news article > p {
+section#news > article > p {
     padding: 0 1em;
     line-height: 1.35em;
 }
 
-section#news article > p:nth-of-type(1)::first-letter {
+section#news > article > p:nth-of-type(1)::first-letter {
     font-size: 2em;
 }
 

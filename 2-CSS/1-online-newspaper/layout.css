@@ -3,21 +3,24 @@
 body {
 	margin: 0px auto;
 	width: 60em;
-    background-color: #edeff0;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-areas:
-        "header header"
-        "menu   aside"
-        "news   aside"
-        "footer aside";
+	background-color: #edeff0;
+	display: grid;
+	grid-template-columns: 80% 20%;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"header header"
+		"menu   aside"
+		"news   aside"
+		"footer aside";
+    align-items: start;
+    align-content: start;
 }
 
 /* SPECIFIC by document placement */
 body > header {
 	position: relative;
-    padding: 1em 1.4em;
-    grid-area: header;
+	padding: 1em 1.4em;
+	grid-area: header;
 }
 
 div#signup {
@@ -28,41 +31,41 @@ div#signup {
 }
 
 nav#menu {
-    grid-area: menu;
+	grid-area: menu;
 	background-color: white;
 }
 
 nav#menu ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
 }
 
 nav#menu li {
-    flex: 1;
+	flex: 1;
 }
 
 body > aside {
-    grid-area: aside;
-    font-size: 1em;
+	grid-area: aside;
+	font-size: 1em;
 }
 
 section#news > article {
-    margin: 1em 1em 1em 0em;
-    background-color: white;
+	margin: 1em 1em 1em 0em;
+	background-color: white;
 }
 
 section#news > article > footer {
-    display: flex;
-    justify-content: flex-end;
+	display: flex;
+	justify-content: flex-end;
 }
 
 section#news > article > footer > span.author {
-    margin-right: auto;
+	margin-right: auto;
 }
 
 body > footer {
-    grid-area: footer;
-    margin-right: 1em;
+	grid-area: footer;
+	margin-right: 1em;
 }
