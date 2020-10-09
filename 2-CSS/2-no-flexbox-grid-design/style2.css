@@ -1,0 +1,96 @@
+body {
+	background-image: url("https://web.fe.up.pt/~arestivo/page/img/exercises/css/stripe.png");
+	margin: 0 0 0 3%;
+}
+
+li {
+	display: inline;
+}
+
+a {
+	text-decoration: none;
+}
+
+div#header {
+	background-color: black;
+	color: white;
+	padding: 1em;
+}
+
+div#header h1,
+div#header h2 {
+	margin: 0;
+}
+
+div#header h2 {
+	font-size: 1em;
+}
+
+div#menu {
+	background-color: #333333;
+}
+
+div#menu ul {
+	margin: 0;
+	padding: 1em;
+}
+
+div#menu li {
+	display: inline;
+	background-color: white;
+	border: 1px solid grey;
+	padding: 1px 0.5em;
+	margin-right: 0.5em;
+}
+
+div#menu a {
+	text-decoration: none;
+}
+
+div#content {
+	background-color: white;
+	padding: 1em 50% 0.5em 1em;
+}
+
+div#content h3 {
+	margin: 0;
+	font-size: 2em;
+}
+
+div#content img {
+	float: right;
+	margin: 1em;
+}
+
+div#content p.introduction {
+	font-style: italic;
+}
+
+div#content a {
+	color: crimson;
+}
+
+div#content ul {
+	background-color: #333333;
+	padding: 5px 1em;
+}
+
+div#content ul li {
+	margin-right: 1em;
+}
+
+div#content ul a {
+	color: white;
+}
+
+div#footer {
+	background-color: white;
+	padding-right: 50%;
+}
+
+div#footer p {
+	margin: 0;
+	margin-right: 5px;
+	text-align: right;
+	font-weight: bold;
+}
