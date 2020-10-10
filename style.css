@@ -1,0 +1,39 @@
+body {
+	width: 50%;
+	margin: auto;
+	font-family: "Roboto", sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+header > h1 {
+	font-size: 5em;
+	margin: 0.2em 0 0.5em 0;
+}
+
+section#exercises ol {
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: stretch;
+}
+
+section#exercises li {
+	list-style-type: none;
+	margin: 1em;
+}
+
+section#exercises li > a {
+	height: 100%;
+	min-height: 5em;
+	display: block;
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+	background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+	padding: 2em 2em 0 2em;
+	font-family: "Open Sans", sans-serif;
+	color: white;
+	font-size: 1.5em;
+}

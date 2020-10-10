@@ -1,11 +1,6 @@
 body {
 	width: 60em;
 	margin: 0 auto;
-	display: grid;
-	grid-template-areas:
-		"green green green"
-		"yellow orange red"
-		"yellow blue red";
 }
 
 section {
@@ -15,27 +10,22 @@ section {
 
 #green {
 	background-color: #baffc9;
-	grid-area: green;
 }
 
 #orange {
 	background-color: #ffdfba;
-	grid-area: orange;
 }
 
 #yellow {
 	background-color: #ffffba;
-	grid-area: yellow;
 }
 
 #red {
 	background-color: #ffb3ba;
-	grid-area: red;
 }
 
 #blue {
 	background-color: #bae1ff;
-	grid-area: blue;
 }
 
 ul {
