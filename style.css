@@ -8,24 +8,75 @@ a {
 	text-decoration: none;
 }
 
+nav#chapter_nav {
+	position: fixed;
+	top: -4em;
+	background-color: white;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	width: 50%;
+	transition: top 0.2s;
+	transition-timing-function: ease-out;
+}
+
+nav#chapter_nav:hover {
+	top: -2px;
+}
+
+nav#chapter_nav ol {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	padding: 0 5em 0 1em;
+	height: 35x;
+}
+
+nav#chapter_nav li {
+	list-style-type: none;
+	flex-grow: 1;
+	margin: 5px 1em;
+	padding: auto;
+	text-align: center;
+	border-radius: 5px;
+	background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+}
+
+nav#chapter_nav a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: white;
+	margin: 2px 0;
+}
+
+nav#chapter_nav img {
+	position: absolute;
+	bottom: -20px;
+	right: 20px;
+	height: 60px;
+}
+
 header > h1 {
 	font-size: 5em;
 	margin: 0.2em 0 0.5em 0;
 }
 
-section#exercises ol {
+section#exercises ol,
+section#chapters ol {
 	padding: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: stretch;
 }
 
-section#exercises li {
+section#exercises li,
+section#chapters li {
 	list-style-type: none;
 	margin: 1em;
 }
 
-section#exercises li > a {
+section#exercises li > a,
+section#chapters li > a {
 	height: 100%;
 	min-height: 5em;
 	display: block;
