@@ -5,7 +5,7 @@ Proposed practice sessions exercises solution for the
 
 ## Live host
 
-Live hosting with Github Pages [right here](https://ctrlmarcio.github.io/feup-ltw/).
+Live hosting [right here](https://web.fe.up.pt/~up201909936/ltw).
 
 ## License
 
