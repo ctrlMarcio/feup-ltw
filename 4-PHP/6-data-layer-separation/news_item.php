@@ -1,4 +1,12 @@
-<?php include 'util.php' ?>
+<?php
+include_once('util.php');
+include_once('database/connection.php');
+include_once('database/comments.php');
+$db = getDb();
+$article = getArticle($db);
+$comments = getComments($db);
+?>
+
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -52,31 +60,55 @@
     </article>
   </aside>
   <section id="news">
-    <?php
-    $articles = get_articles();
-
-    foreach ($articles as $article) { ?>
-      <article>
-        <header>
-          <h1><a href=<?= "\"news_item.php?id=" . $article['id'] . "\"" ?>><?= $article['title'] ?></a></h1>
-        </header>
-        <img src="https://picsum.photos/2000" alt="">
-        <p><?= $article['introduction'] ?></p>
-        <p><?= $article['fulltext'] ?></p>
-        <footer>
-          <span class="author"><?= $article['name'] ?></span>
-          <span class="tags">
-            <?php
-            $tags = get_tags($article);
-            foreach ($tags as $tag) { ?>
-              <a href="list_news.php">#<?= $tag ?></a>
-            <?php } ?>
-          </span>
-          <span class="date"><?= get_time_passed($article['published']) ?></span>
-          <a class="comments" href=<?= "\"news_item.php?id=" . $article['id'] . "#comments\"" ?>><?= $article['comments'] ?></a>
-        </footer>
-      </article>
-    <?php } ?>
+    <article>
+      <header>
+        <h1><a href="#"><?php echo $article['title'] ?></a></h1>
+      </header>
+      <img src="https://picsum.photos/2000" alt="">
+      <p><?php echo $article['introduction'] ?></p>
+      <p><?php echo $article['fulltext'] ?></p>
+      <section id="comments">
+        <h1><?php
+            $amount = count($comments);
+            echo $amount;
+            echo " comment";
+            if ($amount !== 1)
+              echo "s";
+            ?> </h1>
+        <?php foreach ($comments as $comment) { ?>
+          <article class="comment">
+            <span class="user"><?= $comment['username'] ?></span>
+            <span class="date"><?= getTimePassed($comment['published']) ?></span>
+            <p> <?= $comment['text'] ?> </p>
+          </article>
+        <?php } ?>
+        <form>
+          <h2>Add your voice...</h2>
+          <label>Username
+            <input type="text" name="username">
+          </label>
+          <label>E-mail
+            <input type="email" name="email">
+          </label>
+          <label>Comment
+            <textarea name="comment"></textarea>
+          </label>
+          <input type="submit" value="Reply">
+        </form>
+      </section>
+      <footer>
+        <span class="author"> <?= $article['name'] ?> </span>
+        <span class="tags">
+          <?php
+          $tags = getTags($article);
+          foreach ($tags as $tag) { ?>
+            <a href="list_news.php">#<?= $tag ?></a>
+          <?php } ?>
+        </span>
+        <span class="date"><?= getTimePassed($article['published']) ?></span>
+        <a class="comments" href="#comments"><?= count($comments) ?></a>
+      </footer>
+    </article>
   </section>
   <footer>
     <p>&copy; Fake News, 2017</p>
@@ -86,21 +118,5 @@
 </html>
 
 <?php
-function get_articles()
-{
-  $db = get_db();
 
-  $stmt = $db->prepare(
-    'SELECT news.*, users.*, COUNT(comments.id) AS comments
-    FROM news JOIN
-         users USING (username) LEFT JOIN
-         comments ON comments.news_id = news.id
-    GROUP BY news.id, users.username
-    ORDER BY published DESC
-  '
-  );
-  $stmt->execute();
-
-  return $stmt->fetchAll();
-}
 ?>
