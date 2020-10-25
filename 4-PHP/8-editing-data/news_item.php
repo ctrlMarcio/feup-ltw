@@ -9,9 +9,9 @@ $comments = getComments($db);
 
 <?php include 'template/common/header.php' ?>
 
-  <?php include 'template/common/website_header.php' ?>
-  <?php include 'template/common/nav_bar.php' ?>
-  <?php include 'template/common/related_aside.php' ?>
-  <?php include 'template/article/article.php' ?>
+<?php include 'template/common/website_header.php' ?>
+ <?php include 'template/common/nav_bar.php' ?>
+ <?php include 'template/common/related_aside.php' ?>
+ <?php include 'template/article/article.php' ?>
 
 <?php include 'template/common/footer.php' ?>

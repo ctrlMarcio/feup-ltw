@@ -1,6 +1,6 @@
 <section id="edit_article">
   <h1>Edit article</h1>
-  <form action="action_edit_news.php" method="post">
+  <form action="actions/action_edit_news.php" method="post">
     <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
     <label>
       Title <input type="text" name="title" value="<?= $article['title'] ?>">

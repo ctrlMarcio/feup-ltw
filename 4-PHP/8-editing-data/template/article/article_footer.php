@@ -9,6 +9,7 @@
         </span>
         <span class="date"><?= getTimePassed($article['published']) ?></span>
         <a class="comments" href="#comments"><?= count($comments) ?></a>
+        <a class="edit_article" href=edit_news.php?id=<?= $article['id'] ?>>Edit this article</a>
       </footer>
     </article>
   </section>

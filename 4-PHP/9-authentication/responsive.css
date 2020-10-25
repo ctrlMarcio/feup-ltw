@@ -1,0 +1,114 @@
+@media (max-width: 60em) {
+	body {
+		display: block;
+		width: 100%;
+	}
+
+	body > aside {
+		display: none;
+	}
+
+	section#news > article {
+		margin: 0 0 1em 0;
+	}
+
+	body > footer {
+		grid-area: footer;
+		margin-right: 0em;
+	}
+}
+
+@media (max-width: 30em) {
+    body {
+		display: block;
+		background-color: white;
+    }
+
+    body > header {
+        margin: 0;
+    }
+
+	body > header > h2 {
+		display: none;
+	}
+
+	div#signup {
+		position: static;
+	}
+
+	nav#menu {
+		background-color: #2a2f33;
+	}
+
+	nav#menu input[type='checkbox'] + label {
+		width: auto;
+		display: block;
+		padding: 1em;
+		color: white;
+	}
+
+    nav#menu input[type='checkbox'] + label:before {
+		content: "☰";
+    }
+    
+    nav#menu input[type='checkbox']:checked + label:before {
+		content: "✕";
+    }
+
+	nav#menu > ul {
+		display: block;
+	}
+	
+	nav#menu > ul > li {
+		height: 0px;
+		padding: 0em 1em;
+		border-width: 0px;
+		font-size: 1em;
+		background-color: #edeff0;
+		text-align: left;
+		border-width: 0px 0px 0px 5px;
+		visibility: hidden;
+		opacity: 0;
+		transition: height 0.5s, padding 0.5s, visibility 0.5s, opacity 0.3s;
+	}
+
+	nav#menu > ul > li > a {
+		font-weight: normal;
+	}
+    
+    nav#menu input[type='checkbox']:checked ~ ul > li {
+		height: 0.5em;
+		padding: 1em;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	section#news {
+		margin-top: 0px;
+	}
+
+	section#news > article > header {
+		position: static;
+		text-shadow: none;
+		width: auto;
+		padding: 1em;
+	}
+
+	section#news > article > header h1 {
+		margin: 0px;
+	}
+
+	section#news > article > header a {
+		color: black;
+		font-size: 0.7em;
+		line-height: normal;
+	}
+
+	section#news > article > p{
+		font-size: 0.8em;
+	}
+
+	body > footer {
+		padding: 0.3em 1em;
+	}
+}
