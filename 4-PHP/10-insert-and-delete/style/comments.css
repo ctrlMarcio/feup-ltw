@@ -1,0 +1,72 @@
+section#comments {
+    padding: 0 1em;
+}
+
+section#comments > h1 {
+    margin: 1.5em 0;
+}
+
+article.comment > span.user {
+    font-weight: bold;
+    font-style: italic;
+}
+
+article.comment > span.date {
+    float: right;
+    font-weight: bold;
+}
+
+article.comment > p {
+    margin: 1em 0;
+    padding: 1em 1em 1em 1em;
+    background-color: #EDEFF0;
+    line-height: 1.5em;
+}
+
+article.comment > p:before {
+    font-size: 3em;
+    content: "\201C";
+    color: #CCCCCC;
+    position: relative;
+    top: 15px;
+}
+
+section#comments > form {
+    margin: 1em 0em;
+    background-color: #EDEFF0;
+    font: A;
+}
+
+section#comments > form > h2 {
+    font-size: 1.3em;
+    margin: 0 0 0.5em 0;
+}
+
+section#comments > form > label {
+    font-weight: bold;
+}
+
+section#comments > form > label > input[type=text] , section#comments > form > label > input[type=email] {
+    border-color: lightgray;
+    border-width: 2px 0 0 2px;
+}
+
+section#comments > form > label:last-of-type > textarea{
+    display: block;
+    width: 100%;
+    height: 5em;
+    margin-top: 5px;
+    border-color: grey;
+}
+
+a.edit_article {
+    margin: 0 0 0 1em;
+}
+
+input[type=submit] {
+    background-color: black;
+    border-width: 0;
+    color: white;
+    margin: 1em 0; 
+    padding: 1em;
+}

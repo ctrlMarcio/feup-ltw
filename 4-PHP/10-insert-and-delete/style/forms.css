@@ -1,0 +1,61 @@
+section#register, section#login {
+    grid-area: news;
+    width: 50%;
+    margin: auto;
+}
+
+section#register > h1, section#login > h1 {
+    text-align: center;
+    margin: 1em;
+}
+
+form {
+    background-color: white;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+form > label {
+    display: block;
+    margin: 0.5em;
+}
+
+div#checkboxes {
+    display: inline;
+    margin: 1em 0.5em;
+}
+
+form > label > input {
+    margin: 0.5em 0;
+    width: 100%;
+    border-width: 0px 0px 1px 0px;
+    padding: 0.5em 0;
+}
+
+form > label > input[type='checkbox'] {
+    width: min-content;
+}
+
+form > input[type=submit] {
+    width: min-content;
+    margin-left: auto;
+}
+
+textarea {
+    width: 100%;
+    min-height: 10em;
+}
+
+textarea#fulltext {
+    min-height: 20em;
+}
+
+@media (max-width: 30em) {
+    section#register, section#login{
+        margin: 0;
+        width: 100%;
+    }
+}
