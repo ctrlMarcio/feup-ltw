@@ -1,16 +1,21 @@
-const form = document.getElementsByTagName("form")[0]
-form.addEventListener("submit", function () {
-	const inputs = document.querySelectorAll("form label input")
-	let table = document.querySelector("table")
+const form = document.getElementsByTagName('form')[0]
+form.addEventListener('submit', e => {
+	e.preventDefault()
 
+	const inputs = document.querySelectorAll('form label input')
+	const table = document.querySelector('table')
+	const total = document.querySelector('footer span')
+
+	// get the values
 	const description = inputs[0].value
 	const quantity = inputs[1].value
 
-	let tableRow = document.createElement("tr")
+	// create the table row
+	const tableRow = document.createElement('tr')
 
-	let tableDataHeader = document.createElement("td")
-	let tableDataValue = document.createElement("td")
-	let tableDataRemove = document.createElement("td")
+	const tableDataHeader = document.createElement('td')
+	const tableDataValue = document.createElement('td')
+	const tableDataRemove = document.createElement('td')
 
 	tableRow.append(tableDataHeader)
 	tableRow.append(tableDataValue)
@@ -18,14 +23,33 @@ form.addEventListener("submit", function () {
 
 	tableDataHeader.innerHTML = description
 
-	let tableDataValueInput = document.createElement("input")
+	const tableDataValueInput = document.createElement('input')
 	tableDataValue.append(tableDataValueInput)
-	tableDataValueInput.setAttribute("value", quantity)
+	tableDataValueInput.setAttribute('value', quantity)
 
-	let removeInput = document.createElement("input")
+	const removeInput = document.createElement('input')
 	tableDataRemove.append(removeInput)
-	removeInput.setAttribute("type", "button")
-	removeInput.setAttribute("value", "Remove")
+	removeInput.setAttribute('type', 'button')
+	removeInput.setAttribute('value', 'Remove')
+
+	tableRow.setAttribute('last_value', quantity)
 
 	table.append(tableRow)
+
+	// remove listener
+	removeInput.addEventListener('click', _ => {
+		total.innerHTML = +total.innerHTML - +quantity
+		
+		tableRow.remove()
+	})
+
+	// update listener
+	tableDataValueInput.addEventListener('input', _ => {
+		const last = +tableRow.getAttribute('last_value')
+		total.innerHTML = +total.innerHTML -last + +tableDataValueInput.value
+		tableRow.setAttribute('last_value', tableDataValueInput.value)
+	})
+
+	// increment total
+	total.innerHTML = +total.innerHTML + +quantity
 })
