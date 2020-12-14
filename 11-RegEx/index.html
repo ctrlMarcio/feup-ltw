@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>11 - Regular Expressions</title>
+		<link rel="stylesheet" href="../style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../chapters-everywhere.js"> </script>
+	</head>
+	<body>
+		<nav id="chapter_nav">
+			<a href=".."><img src="../resources/regex-logo.png" alt="The RegEx logo" /></a>
+			<div id="menu"></div>
+		</nav>
+		<header>
+			<h1>11th week - Regular Expressions</h1>
+		</header>
+		<section id="exercise">
+			<form action="myscript.php">
+				Username: <input type="text" pattern="^[a-zA-Z][a-zA-Z0-9]{3,8}[a-zA-Z]$" name="username"/>
+				<br/>
+				Real Name: <input type="text" pattern="[^\\|!\x22@#£$§%&\/()=?{[\]}'«»*+]*" name="real_name"/>
+				<br/>
+				Zip code: <input type="text" pattern="\d\d\d\d(-\d\d\d)?" name="zip_code"/>
+				<br/>
+				IPv4: <input type="text" pattern="(([1-9]|[1-9]\d|1\d\d|25[0-6]|2[0-4]\d).){3}([1-9]|[1-9]\d|1\d\d|25[0-6]|2[0-4]\d)" name="ipv4"/>
+				<br/>
+				MAC: <input type="text" pattern="([\dA-Fa-f]{2}:){5}[\dA-Fa-f]{2}|([\dA-Fa-f]{2}-){5}[\dA-Fa-f]{2}" name="mac"/>
+				<br/>
+				<input type="submit" value="Try"/>
+			</form>
+		</section>
+	</body>
+</html>
